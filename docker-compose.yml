@@ -8,7 +8,8 @@ services:
     build: kinbaku
     restart: unless-stopped
     environment:
-      - RAILS_ENV=development  # TODO fix for production
+      - RAILS_ENV=production
+      - SECRET_KEY_BASE=$KINBAKU_SECRET_KEY_BASE
     volumes:
       - ./production.sqlite3:/opt/app/db/development.sqlite3  # TODO fix for production
       - ./storage/production:/opt/app/storage
