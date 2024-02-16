@@ -11,6 +11,7 @@ services:
       - RAILS_ENV=development  # TODO fix for production
     volumes:
       - ./production.sqlite3:/opt/app/db/development.sqlite3  # TODO fix for production
+      - ./storage/production:/opt/app/storage
     networks:
       - internal
 
@@ -20,6 +21,7 @@ services:
       - RAILS_ENV=development
     volumes:
       - ./development.sqlite3:/opt/app/db/development.sqlite3
+      - ./storage/development:/opt/app/storage
     networks:
       - internal
 
