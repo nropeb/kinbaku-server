@@ -1,0 +1,7 @@
+{$KINBAKU_DOMAIN:kinbaku.local} {
+    reverse_proxy * kinbaku:3000
+}
+
+{$KINBAKU_DEV_DOMAIN:dev.kinbaku.local}, localhost {
+    reverse_proxy * kinbaku-dev:3000
+}
