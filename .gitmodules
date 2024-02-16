@@ -1,6 +1,6 @@
 [submodule "kinbaku"]
 	path = kinbaku
-	url = git@github.com:anserjan/kinbaku.git
+	url = https://github.com/anserjan/kinbaku.git
 [submodule "kinbaku-dev"]
 	path = kinbaku-dev
-	url = git@github.com:anserjan/kinbaku.git
+	url = https://github.com/anserjan/kinbaku.git
