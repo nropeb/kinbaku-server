@@ -11,7 +11,7 @@ services:
       - RAILS_ENV=production
       - SECRET_KEY_BASE=$KINBAKU_SECRET_KEY_BASE
     volumes:
-      - ./production.sqlite3:/opt/app/db/development.sqlite3  # TODO fix for production
+      - ./production.sqlite3:/opt/app/db/production.sqlite3
       - ./storage/production:/opt/app/storage
     networks:
       - internal
