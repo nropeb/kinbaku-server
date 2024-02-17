@@ -1,7 +1,7 @@
-{$KINBAKU_DOMAIN:kinbaku.local} {
+{$KINBAKU_DOMAIN:kinbaku.local}, www.{$KINBAKU_DOMAIN:kinbaku.local} {
     reverse_proxy * kinbaku:3000
 }
 
-{$KINBAKU_DEV_DOMAIN:dev.kinbaku.local}, localhost {
+{$KINBAKU_DEV_DOMAIN:dev.kinbaku.local}, www.{$KINBAKU_DEV_DOMAIN:dev.kinbaku.local}, localhost {
     reverse_proxy * kinbaku-dev:3000
 }
