@@ -10,6 +10,12 @@ services:
     environment:
       - RAILS_ENV=production
       - SECRET_KEY_BASE=$KINBAKU_SECRET_KEY_BASE
+      - KINBAKU_DOMAIN=$KINBAKU_DOMAIN
+      - KINBAKU_SMTP_ADDRESS=$KINBAKU_SMTP_ADDRESS
+      - KINBAKU_SMTP_DOMAIN=$KINBAKU_SMTP_DOMAIN
+      - KINBAKU_SMTP_USER_NAME=$KINBAKU_SMTP_USER_NAME
+      - KINBAKU_SMTP_PASSWORD=$KINBAKU_SMTP_PASSWORD
+      - KINBAKU_SMTP_PORT=$KINBAKU_SMTP_PORT
     volumes:
       - ./production.sqlite3:/opt/app/db/production.sqlite3
       - ./storage/production:/opt/app/storage
@@ -20,6 +26,13 @@ services:
     build: kinbaku-dev
     environment:
       - RAILS_ENV=development
+      - KINBAKU_DOMAIN=$KINBAKU_DEV_DOMAIN
+      - KINBAKU_SMTP_ADDRESS=$KINBAKU_DEV_SMTP_ADDRESS
+      - KINBAKU_SMTP_DOMAIN=$KINBAKU_DEV_SMTP_DOMAIN
+      - KINBAKU_SMTP_USER_NAME=$KINBAKU_DEV_SMTP_USER_NAME
+      - KINBAKU_SMTP_PASSWORD=$KINBAKU_DEV_SMTP_PASSWORD
+      - KINBAKU_SMTP_PORT=$KINBAKU_DEV_SMTP_PORT
+
     volumes:
       - ./development.sqlite3:/opt/app/db/development.sqlite3
       - ./storage/development:/opt/app/storage
